@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           Trajet  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,9 +7,9 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <Catalogue> (fichier Catalogue.h) ----------------
-#if ! defined ( CATALOGUE_H )
-#define CATALOGUE_H
+//---------- Interface de la classe <Trajet> (fichier Trajet.h) ----------------
+#if ! defined ( TRAJET_H )
+#define TRAJET_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -18,15 +18,12 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Catalogue>
-// On pourrait:
-// - Afficher le touts les trajets dans le catalogue courant
-// - Ajouter des trajets simples ou composés
-// - Rechercher le parcours dans le catalogue courant
+// Rôle de la classe <Trajet>
+//
 //
 //------------------------------------------------------------------------
 
-class Catalogue 
+class Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -38,9 +35,15 @@ public:
     // Contrat :
     //
 
+    virtual void Afficher();
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Catalogue & operator = ( const Catalogue & unCatalogue );
+    Trajet & operator = ( const Trajet & unTrajet );
     // Mode d'emploi :
     //
     // Contrat :
@@ -48,19 +51,24 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    Catalogue ( const Catalogue & unCatalogue );
+    Trajet ( const Trajet & unTrajet );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Catalogue ( );
+    Trajet ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+    Trajet (char*& depart_param, char*& arrivee_param);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Catalogue ( );
+    virtual ~Trajet ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -72,9 +80,10 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-
+  char* depart;
+  char* arrivee;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Catalogue>
+//-------------------------------- Autres définitions dépendantes de <Trajet>
 
 #endif // XXX_H

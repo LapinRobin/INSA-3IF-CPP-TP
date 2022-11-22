@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           ListeChainee  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,7 +7,7 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Catalogue> (fichier Catalogue.cpp) ------------
+//---------- Réalisation de la classe <ListeChainee> (fichier ListeChainee.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -16,14 +16,14 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "Catalogue.h"
+#include "ListeChainee.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Catalogue::Méthode ( liste des paramètres )
+// type ListeChainee::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
@@ -31,7 +31,7 @@ using namespace std;
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-Catalogue & Catalogue::operator = ( const Catalogue & unCatalogue )
+ListeChainee & ListeChainee::operator = ( const ListeChainee & unListeChainee )
 // Algorithme :
 //
 {
@@ -39,36 +39,36 @@ Catalogue & Catalogue::operator = ( const Catalogue & unCatalogue )
 
 
 //-------------------------------------------- Constructeurs - destructeur
-Catalogue::Catalogue ( const Catalogue & unCatalogue )
+ListeChainee::ListeChainee ( const ListeChainee & unListeChainee )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <Catalogue>" << endl;
+    cout << "Appel au constructeur de copie de <ListeChainee>" << endl;
 #endif
-} //----- Fin de Catalogue (constructeur de copie)
+} //----- Fin de ListeChainee (constructeur de copie)
 
 
-Catalogue::Catalogue ( )
+ListeChainee::ListeChainee ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Catalogue>" << endl;
+    cout << "Appel au constructeur de <ListeChainee>" << endl;
 #endif
-} //----- Fin de Catalogue
+} //----- Fin de ListeChainee
 
 
-Catalogue::~Catalogue ( )
+ListeChainee::~ListeChainee ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <Catalogue>" << endl;
+    cout << "Appel au destructeur de <ListeChainee>" << endl;
 #endif
-} //----- Fin de ~Catalogue
+} //----- Fin de ~ListeChainee
 
 
 //------------------------------------------------------------------ PRIVE
 
-//----------------------------------------------------- Méthodes protégées
+//----------------------------------------------------- Méthodes protégée

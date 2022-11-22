@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           TrajetSimple  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,7 +7,7 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Catalogue> (fichier Catalogue.cpp) ------------
+//---------- Réalisation de la classe <TrajetSimple> (fichier TrajetSimple.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -16,57 +16,77 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "Catalogue.h"
+#include "TrajetSimple.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Catalogue::Méthode ( liste des paramètres )
+// type TrajetSimple::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
 //} //----- Fin de Méthode
 
-
-//------------------------------------------------- Surcharge d'opérateurs
-Catalogue & Catalogue::operator = ( const Catalogue & unCatalogue )
+void TrajetSimple::Afficher()
 // Algorithme :
 //
 {
-} //----- Fin de operator =
+  Trajet::Afficher();
+  cout << "mode of transport: " << modeTransport << endl;
+} //----- Fin de Méthode
+
+
+//------------------------------------------------- Surcharge d'opérateurs
+//TrajetSimple & TrajetSimple::operator = ( const TrajetSimple & unTrajetSimple )
+// Algorithme :
+//
+//{
+//} //----- Fin de operator =
 
 
 //-------------------------------------------- Constructeurs - destructeur
-Catalogue::Catalogue ( const Catalogue & unCatalogue )
+//TrajetSimple::TrajetSimple ( const TrajetSimple & unTrajetSimple )
+// Algorithme :
+//
+/*{
+#ifdef MAP
+    cout << "Appel au constructeur de copie de <TrajetSimple>" << endl;
+#endif
+} //----- Fin de TrajetSimple (constructeur de copie)
+*/
+
+TrajetSimple::TrajetSimple ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <Catalogue>" << endl;
+    cout << "Appel au constructeur de <TrajetSimple>" << endl;
 #endif
-} //----- Fin de Catalogue (constructeur de copie)
+} //----- Fin de TrajetSimple
 
-
-Catalogue::Catalogue ( )
+TrajetSimple::TrajetSimple (char*& depart_param, char*& arrivee_param,
+      char*& modeTransport_param)
+      : Trajet(depart_param, arrivee_param), modeTransport(modeTransport_param)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Catalogue>" << endl;
+    cout << "Appel au constructeur de <TrajetSimple>" << endl;
 #endif
-} //----- Fin de Catalogue
+
+} //----- Fin de TrajetSimple
 
 
-Catalogue::~Catalogue ( )
+TrajetSimple::~TrajetSimple ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <Catalogue>" << endl;
+    cout << "Appel au destructeur de <TrajetSimple>" << endl;
 #endif
-} //----- Fin de ~Catalogue
+} //----- Fin de ~TrajetSimple
 
 
 //------------------------------------------------------------------ PRIVE

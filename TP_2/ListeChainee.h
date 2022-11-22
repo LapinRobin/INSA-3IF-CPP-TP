@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           ListeChainee  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,9 +7,9 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <Catalogue> (fichier Catalogue.h) ----------------
-#if ! defined ( CATALOGUE_H )
-#define CATALOGUE_H
+//---------- Interface de la classe <ListeChainee> (fichier ListeChainee.h) ----------------
+#if ! defined ( LISTECHAINEE_H )
+#define LISTECHAINEE_H
 
 //--------------------------------------------------- Interfaces utilisées
 
@@ -18,15 +18,12 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Catalogue>
-// On pourrait:
-// - Afficher le touts les trajets dans le catalogue courant
-// - Ajouter des trajets simples ou composés
-// - Rechercher le parcours dans le catalogue courant
+// Rôle de la classe <ListeChainee>
+//
 //
 //------------------------------------------------------------------------
 
-class Catalogue 
+class ListeChainee
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -40,7 +37,7 @@ public:
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Catalogue & operator = ( const Catalogue & unCatalogue );
+    ListeChainee & operator = ( const ListeChainee & unListeChainee );
     // Mode d'emploi :
     //
     // Contrat :
@@ -48,19 +45,19 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    Catalogue ( const Catalogue & unCatalogue );
+    ListeChainee ( const ListeChainee & unListeChainee );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Catalogue ( );
+    ListeChainee ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Catalogue ( );
+    virtual ~ListeChainee ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -75,6 +72,6 @@ protected:
 
 };
 
-//-------------------------------- Autres définitions dépendantes de <Catalogue>
+//-------------------------------- Autres définitions dépendantes de <ListeChainee>
 
 #endif // XXX_H

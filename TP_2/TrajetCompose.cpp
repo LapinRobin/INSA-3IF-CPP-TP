@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           TrajetCompose  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,7 +7,7 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Catalogue> (fichier Catalogue.cpp) ------------
+//---------- Réalisation de la classe <TrajetCompose> (fichier TrajetCompose.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -16,14 +16,14 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "Catalogue.h"
+#include "TrajetCompose.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Catalogue::Méthode ( liste des paramètres )
+// type TrajetCompose::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
@@ -31,7 +31,7 @@ using namespace std;
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-Catalogue & Catalogue::operator = ( const Catalogue & unCatalogue )
+TrajetCompose & TrajetCompose::operator = ( const TrajetCompose & unTrajetCompose )
 // Algorithme :
 //
 {
@@ -39,34 +39,34 @@ Catalogue & Catalogue::operator = ( const Catalogue & unCatalogue )
 
 
 //-------------------------------------------- Constructeurs - destructeur
-Catalogue::Catalogue ( const Catalogue & unCatalogue )
+TrajetCompose::TrajetCompose ( const TrajetCompose & unTrajetCompose )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <Catalogue>" << endl;
+    cout << "Appel au constructeur de copie de <TrajetCompose>" << endl;
 #endif
-} //----- Fin de Catalogue (constructeur de copie)
+} //----- Fin de TrajetCompose (constructeur de copie)
 
 
-Catalogue::Catalogue ( )
+TrajetCompose::TrajetCompose ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Catalogue>" << endl;
+    cout << "Appel au constructeur de <TrajetCompose>" << endl;
 #endif
-} //----- Fin de Catalogue
+} //----- Fin de TrajetCompose
 
 
-Catalogue::~Catalogue ( )
+TrajetCompose::~TrajetCompose ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <Catalogue>" << endl;
+    cout << "Appel au destructeur de <TrajetCompose>" << endl;
 #endif
-} //----- Fin de ~Catalogue
+} //----- Fin de ~TrajetCompose
 
 
 //------------------------------------------------------------------ PRIVE

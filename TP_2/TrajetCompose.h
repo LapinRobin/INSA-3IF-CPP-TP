@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           TrajetCompose  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,26 +7,24 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <Catalogue> (fichier Catalogue.h) ----------------
-#if ! defined ( CATALOGUE_H )
-#define CATALOGUE_H
+//---------- Interface de la classe <TrajetCompose> (fichier TrajetCompose.h) ----------------
+#if ! defined ( TRAJETCOMPOSE_H )
+#define TRAJETCOMPOSE_H
+
 
 //--------------------------------------------------- Interfaces utilisées
-
+#include "Trajet.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Catalogue>
-// On pourrait:
-// - Afficher le touts les trajets dans le catalogue courant
-// - Ajouter des trajets simples ou composés
-// - Rechercher le parcours dans le catalogue courant
+// Rôle de la classe <TrajetCompose>
+//
 //
 //------------------------------------------------------------------------
 
-class Catalogue 
+class TrajetCompose : public Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -40,7 +38,7 @@ public:
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Catalogue & operator = ( const Catalogue & unCatalogue );
+    TrajetCompose & operator = ( const TrajetCompose & unTrajetCompose );
     // Mode d'emploi :
     //
     // Contrat :
@@ -48,19 +46,19 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    Catalogue ( const Catalogue & unCatalogue );
+    TrajetCompose ( const TrajetCompose & unTrajetCompose );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Catalogue ( );
+    TrajetCompose ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Catalogue ( );
+    virtual ~TrajetCompose ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -75,6 +73,6 @@ protected:
 
 };
 
-//-------------------------------- Autres définitions dépendantes de <Catalogue>
+//-------------------------------- Autres définitions dépendantes de <TrajetCompose>
 
 #endif // XXX_H

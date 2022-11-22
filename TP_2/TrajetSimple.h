@@ -1,5 +1,5 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           TrajetSimple  -  description
                              -------------------
 
     début                : 22/11/2022
@@ -7,26 +7,23 @@
     e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <Catalogue> (fichier Catalogue.h) ----------------
-#if ! defined ( CATALOGUE_H )
-#define CATALOGUE_H
+//---------- Interface de la classe <TrajetSimple> (fichier TrajetSimple.h) ----------------
+#if ! defined ( TRAJETSIMPLE_H )
+#define TRAJETSIMPLE_H
 
 //--------------------------------------------------- Interfaces utilisées
-
+#include "Trajet.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Catalogue>
-// On pourrait:
-// - Afficher le touts les trajets dans le catalogue courant
-// - Ajouter des trajets simples ou composés
-// - Rechercher le parcours dans le catalogue courant
+// Rôle de la classe <TrajetSimple>
+//
 //
 //------------------------------------------------------------------------
 
-class Catalogue 
+class TrajetSimple : public Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -38,9 +35,15 @@ public:
     // Contrat :
     //
 
+    void Afficher();
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
 
 //------------------------------------------------- Surcharge d'opérateurs
-    Catalogue & operator = ( const Catalogue & unCatalogue );
+    //TrajetSimple & operator = ( const TrajetSimple & unTrajetSimple );
     // Mode d'emploi :
     //
     // Contrat :
@@ -48,19 +51,27 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    Catalogue ( const Catalogue & unCatalogue );
+    //TrajetSimple ( const TrajetSimple & unTrajetSimple );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    Catalogue ( );
+    TrajetSimple ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    virtual ~Catalogue ( );
+    TrajetSimple (char*& depart_param, char*& arrivee_param,
+      char*& modeTransport_param);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
+
+    virtual ~TrajetSimple ( );
     // Mode d'emploi :
     //
     // Contrat :
@@ -72,9 +83,9 @@ protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-
+   char* modeTransport;
 };
 
-//-------------------------------- Autres définitions dépendantes de <Catalogue>
+//-------------------------------- Autres définitions dépendantes de <TrajetSimple>
 
 #endif // XXX_H
