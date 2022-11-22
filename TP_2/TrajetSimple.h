@@ -63,7 +63,7 @@ public:
     // Contrat :
     //
 
-    TrajetSimple (char*& depart_param, char*& arrivee_param,
+    TrajetSimple (char * depart_param, char * arrivee_param,
       char*& modeTransport_param);
     // Mode d'emploi :
     //

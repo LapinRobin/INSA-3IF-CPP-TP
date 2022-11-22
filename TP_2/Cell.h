@@ -1,31 +1,29 @@
 /*************************************************************************
-                           ListeChainee  -  description
+                           Cell  -  description
                              -------------------
 
     début                : 22/11/2022
-    copyright            : (C) 2022 par NGUYEN Le Tuan Khai, SU Yikang, WYNCOLL Marnie
-    e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
+    copyright            : (C) 2022 par NGUYEN Le Tuan Khai, SU Yikang
+    e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la classe <ListeChainee> (fichier ListeChainee.h) ----------------
-#if ! defined ( LISTECHAINEE_H )
-#define LISTECHAINEE_H
+//---------- Interface de la classe <Cell> (fichier Cell.h) ----------------
+#if ! defined ( CELL_H )
+#define CELL_H
 
 //--------------------------------------------------- Interfaces utilisées
-#include <iostream>
 #include "Trajet.h"
-#include "Cell.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <ListeChainee>
+// Rôle de la classe <Cell>
+// The Cell represents a Trajet Simple and a pointer to the next Cell.
 //
-//
-//-------------------------ic Trajet-----------------------------------------------
+//------------------------------------------------------------------------
 
-class ListeChainee
+class Cell
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -37,16 +35,14 @@ public:
     // Contrat :
     //
 
-
+    void Afficher ();
     // Mode d'emploi :
     //
     // Contrat :
     //
-    addElem(Trajet &unTrajet);
-    Afficher();
 
 //------------------------------------------------- Surcharge d'opérateurs
-    ListeChainee & operator = ( const ListeChainee & unListeChainee );
+    // Cell & operator = ( const Cell & unCell );
     // Mode d'emploi :
     //
     // Contrat :
@@ -54,42 +50,46 @@ public:
 
 
 //-------------------------------------------- Constructeurs - destructeur
-    ListeChainee ( const ListeChainee & unListeChainee );
+    //Cell ( const Cell & unCell );
     // Mode d'emploi (constructeur de copie) :
     //
     // Contrat :
     //
 
-    ListeChainee ( );
+    Cell ( );
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-    ListeChainee (Cell * headPtr_param);
+    Cell (Trajet* unTrajet);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
-
-    virtual ~ListeChainee ( );
+    Cell (Trajet* unTrajet, Cell* next_param);
     // Mode d'emploi :
     //
     // Contrat :
     //
 
+    virtual ~Cell ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+    Cell* next {NULL};
 //------------------------------------------------------------------ PRIVE
 
 protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-
-Cell *headPtr {NULL};
+  Trajet* trajet;
 
 };
 
-//-------------------------------- Autres définitions dépendantes de <ListeChainee>
+//-------------------------------- Autres définitions dépendantes de <Cell>
 
-#endif // XXX_H
+#endif // CELL_H

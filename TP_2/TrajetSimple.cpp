@@ -66,7 +66,7 @@ TrajetSimple::TrajetSimple ( )
 #endif
 } //----- Fin de TrajetSimple
 
-TrajetSimple::TrajetSimple (char*& depart_param, char*& arrivee_param,
+TrajetSimple::TrajetSimple (char * depart_param, char * arrivee_param,
       char*& modeTransport_param)
       : Trajet(depart_param, arrivee_param), modeTransport(modeTransport_param)
 // Algorithme :

@@ -4,6 +4,8 @@
 #include "TrajetSimple.h"
 #include "TrajetCompose.h"
 #include "Catalogue.h"
+#include "Cell.h"
+#include "ListeChainee.h"
 
 int main() {
   char* depart = "Lyon";
@@ -14,5 +16,10 @@ int main() {
   trajetOne.Afficher();
   trajetSimpleTwo.Afficher();
 
+
+  Cell cell1(&trajetOne);
+  ListeChainee lsch();
+  lsch.addElem(&cell1);
+  lsch.Afficher();
   return 0;
 }

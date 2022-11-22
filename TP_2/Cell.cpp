@@ -1,15 +1,13 @@
-
-
 /*************************************************************************
-                           Trajet  -  description
+                           Cell  -  description
                              -------------------
 
-       début                : 22/11/2022
-       copyright            : (C) 2022 par NGUYEN Le Tuan Khai, SU Yikang, WYNCOLL Marnie
-       e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr, marnie.wyncoll@insa-lyon.fr
+    début                : 22/11/2022
+    copyright            : (C) 2022 par NGUYEN Le Tuan Khai, SU Yikang
+    e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la classe <Trajet> (fichier Trajet.cpp) ------------
+//---------- Réalisation de la classe <Cell> (fichier Cell.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -18,30 +16,33 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "Trajet.h"
+#include "Cell.h"
+
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-// type Trajet::Méthode ( liste des paramètres )
+// type Cell::Méthode ( liste des paramètres )
 // Algorithme :
 //
 //{
 //} //----- Fin de Méthode
 
-void Trajet::Afficher()
+void Cell::Afficher()
 // Algorithme :
 //
+//{
+//} //----- Fin de Méthode
 {
-  cout << "depart: " << depart << endl;
-  cout << "arrivee: " << arrivee << endl;
-} //----- Fin de Méthode
+  trajet->Afficher();
+
+}
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-//Trajet & Trajet::operator = ( const Trajet & unTrajet )
+//Cell & Cell::operator = ( const Cell & unCell )
 // Algorithme :
 //
 //{
@@ -49,46 +50,58 @@ void Trajet::Afficher()
 
 
 //-------------------------------------------- Constructeurs - destructeur
-Trajet::Trajet ( const Trajet & unTrajet )
+/*Cell::Cell ( const Cell & unCell )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de copie de <Trajet>" << endl;
+    cout << "Appel au constructeur de copie de <Cell>" << endl;
 #endif
-} //----- Fin de Trajet (constructeur de copie)
+} //----- Fin de Cell (constructeur de copie)
+*/
 
-
-Trajet::Trajet ( )
+Cell::Cell ( )
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Trajet>" << endl;
+    cout << "Appel au constructeur de <Cell>" << endl;
 #endif
-} //----- Fin de Trajet
+} //----- Fin de Cell
 
 
-Trajet::Trajet (char * depart_param, char * arrivee_param)
+Cell::Cell (Trajet* & unTrajet)
+ : trajet(unTrajet)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au constructeur de <Trajet>" << endl;
+    cout << "Appel au constructeur de <Cell>" << endl;
 #endif
-  depart = depart_param;
-  arrivee = arrivee_param;
-} //----- Fin de Trajet
 
 
-Trajet::~Trajet ( )
+} //----- Fin de Cell
+
+
+Cell::Cell (Trajet* unTrajet, Cell* next_param)
+  : trajet(unTrajet), next(next_param)
 // Algorithme :
 //
 {
 #ifdef MAP
-    cout << "Appel au destructeur de <Trajet>" << endl;
+    cout << "Appel au constructeur de <Cell>" << endl;
 #endif
-} //----- Fin de ~Trajet
+} //----- Fin de Cell
+
+
+Cell::~Cell ( )
+// Algorithme :
+//
+{
+#ifdef MAP
+    cout << "Appel au destructeur de <Cell>" << endl;
+#endif
+} //----- Fin de ~Cell
 
 
 //------------------------------------------------------------------ PRIVE

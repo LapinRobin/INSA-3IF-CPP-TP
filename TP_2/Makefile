@@ -1,5 +1,5 @@
-main: Trajet.o TrajetSimple.o TrajetCompose.o main.o
-	g++ -o main main.o Trajet.o TrajetSimple.o TrajetCompose.o
+main: Trajet.o TrajetSimple.o TrajetCompose.o main.o Cell.o
+	g++ -o main main.o Trajet.o TrajetSimple.o TrajetCompose.o Cell.o
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -12,3 +12,6 @@ TrajetSimple.o: TrajetSimple.cpp
 
 TrajetCompose.o: TrajetCompose.cpp
 	g++ -c TrajetCompose.cpp
+
+Cell.o: Cell.cpp
+	g++ -c Cell.cpp

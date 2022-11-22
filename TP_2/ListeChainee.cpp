@@ -17,6 +17,8 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "ListeChainee.h"
+#include "Cell.h"
+#include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -30,14 +32,47 @@ using namespace std;
 //} //----- Fin de Méthode
 
 
+// Algorithme :
+ListeChainee::addElem(Cell * unCell)
+{
+  Cell *cursor = headPtr;
+    if (headPtr == NULL) {
+      headPtr = unCell
+    } else {
+      while (1) {
+        if (cursor->next != NULL) {
+          cursor = cursor->next;
+        } else {
+          cursor->next = unCell;
+          break;
+        }
+      }
+    }
+} //----- Fin de Méthode
+
+
+ListeChainee::Afficher()
+{
+  Cell *cursor = headPtr;
+  while (1) {
+    if (cursor->next != NULL) {
+      cursor->Afficher();
+      cursor = cursor->next;
+    } else {
+      break;
+    }
+  }
+}
+/*
 //------------------------------------------------- Surcharge d'opérateurs
 ListeChainee & ListeChainee::operator = ( const ListeChainee & unListeChainee )
 // Algorithme :
 //
 {
 } //----- Fin de operator =
+*/
 
-
+/*
 //-------------------------------------------- Constructeurs - destructeur
 ListeChainee::ListeChainee ( const ListeChainee & unListeChainee )
 // Algorithme :
@@ -47,7 +82,7 @@ ListeChainee::ListeChainee ( const ListeChainee & unListeChainee )
     cout << "Appel au constructeur de copie de <ListeChainee>" << endl;
 #endif
 } //----- Fin de ListeChainee (constructeur de copie)
-
+*/
 
 ListeChainee::ListeChainee ( )
 // Algorithme :
@@ -56,7 +91,18 @@ ListeChainee::ListeChainee ( )
 #ifdef MAP
     cout << "Appel au constructeur de <ListeChainee>" << endl;
 #endif
+
 } //----- Fin de ListeChainee
+
+
+ListeChainee::ListeChainee (Cell * headPtr_param)
+  : headPtr(headPtr_param)
+{
+#ifdef MAP
+    cout << "Appel au constructeur de <ListeChainee>" << endl;
+#endif
+
+}
 
 
 ListeChainee::~ListeChainee ( )
