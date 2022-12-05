@@ -1,29 +1,49 @@
+/*************************************************************************
+                           Xxx  -  description
+                             -------------------
+                             
+    début                : 22/11/2022
+    copyright            : (C) 2022 par NGUYEN Le Tuan Khai, SU Yikang
+    e-mail               : le.nguyen@insa-lyon.fr, yikang.su@insa-lyon.fr
+*************************************************************************/
 
-#include <iostream>
-#include "Trajet.h"
-#include "TrajetSimple.h"
-#include "TrajetCompose.h"
-#include "Catalogue.h"
-#include "Cell.h"
-#include "ListeChainee.h"
+//---------- Réalisation du module <Main> (fichier Main.cpp) ---------------
 
-int main() {
-  char* depart = "Lyon";
-  char* arrivee = "Paris";
-  char* modeTransport = "auto";
-  Trajet trajetOne(depart, arrivee);
-  TrajetSimple trajetSimpleTwo(depart, arrivee, modeTransport);
-  trajetOne.Afficher();
-  trajetSimpleTwo.Afficher();
+/////////////////////////////////////////////////////////////////  INCLUDE
+//-------------------------------------------------------- Include système
 
-/* 
-  Cell cell1(&trajetOne);
-  ListeChainee lsch;
-  lsch.addElem(&cell1);
-  lsch.Afficher();
-  return 0; */
+//------------------------------------------------------ Include personnel
+#include "Main.h"
 
-  Catalogue c1;
-  c1.Init();
+///////////////////////////////////////////////////////////////////  PRIVE
+//------------------------------------------------------------- Constantes
 
-}
+//------------------------------------------------------------------ Types
+
+//---------------------------------------------------- Variables statiques
+
+//------------------------------------------------------ Fonctions privées
+//static type nom ( liste de paramètres )
+// Mode d'emploi :
+//
+// Contrat :
+//
+// Algorithme :
+//
+//{
+//} //----- fin de nom
+
+//////////////////////////////////////////////////////////////////  PUBLIC
+//---------------------------------------------------- Fonctions publiques
+int Main ( )
+// Algorithme :
+//
+{
+    // Crée un instance de Catalogue
+    Catalogue c;
+    // Appel à la fonction UI, qui affiche l'interface d'utilisateur
+    c.UI();
+
+    return 0;
+} //----- fin de Main
+
