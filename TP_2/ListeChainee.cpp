@@ -33,11 +33,11 @@ using namespace std;
 
 
 // Algorithme :
-ListeChainee::addElem(Cell * unCell)
+void ListeChainee::addElem(Cell * unCell)
 {
   Cell *cursor = headPtr;
     if (headPtr == NULL) {
-      headPtr = unCell
+      headPtr = unCell;
     } else {
       while (1) {
         if (cursor->next != NULL) {
@@ -51,7 +51,7 @@ ListeChainee::addElem(Cell * unCell)
 } //----- Fin de Méthode
 
 
-ListeChainee::Afficher()
+void ListeChainee::Afficher()
 {
   Cell *cursor = headPtr;
   while (1) {

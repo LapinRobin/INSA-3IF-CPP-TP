@@ -37,8 +37,38 @@ public:
     //
     // Contrat :
     //
+    void Init ( void );
+    // Mode d'emploi :
 
+    // Contrat :
+    //
 
+    void Afficher ( void );
+    // Mode d'emploi :
+
+    // Contrat :
+    
+    void AjouterTrajetSimple ( void );
+    // Mode d'emploi :
+
+    // Contrat :
+    //
+
+    void AjouterTrajetCompose ( void );
+    // Mode d'emploi :
+
+    // Contrat :
+    //
+    void RechercheSimple ( void );
+    // Mode d'emploi :
+
+    // Contrat :
+    //    
+    void RechercheAvancee ( void );
+    // Mode d'emploi :
+
+    // Contrat :
+    //
 //------------------------------------------------- Surcharge d'opérateurs
     Catalogue & operator = ( const Catalogue & unCatalogue );
     // Mode d'emploi :

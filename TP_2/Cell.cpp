@@ -17,6 +17,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "Cell.h"
+#include "Trajet.h"
 
 
 //------------------------------------------------------------- Constantes
@@ -69,28 +70,32 @@ Cell::Cell ( )
 #endif
 } //----- Fin de Cell
 
-
+/*
 Cell::Cell (Trajet* & unTrajet)
- : trajet(unTrajet)
+    : trajet(unTrajet)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Cell>" << endl;
 #endif
+
+
 
 
 } //----- Fin de Cell
-
+*/
 
 Cell::Cell (Trajet* unTrajet, Cell* next_param)
-  : trajet(unTrajet), next(next_param)
+    :trajet(unTrajet), next(next_param)
 // Algorithme :
 //
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Cell>" << endl;
 #endif
+
+
 } //----- Fin de Cell
 
 

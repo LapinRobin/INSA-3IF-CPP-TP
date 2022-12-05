@@ -16,10 +16,14 @@ int main() {
   trajetOne.Afficher();
   trajetSimpleTwo.Afficher();
 
-
+/* 
   Cell cell1(&trajetOne);
-  ListeChainee lsch();
+  ListeChainee lsch;
   lsch.addElem(&cell1);
   lsch.Afficher();
-  return 0;
+  return 0; */
+
+  Catalogue c1;
+  c1.Init();
+
 }

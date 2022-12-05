@@ -42,8 +42,8 @@ public:
     //
     // Contrat :
     //
-    addElem(Trajet &unTrajet);
-    Afficher();
+    void addElem(Cell * unCell);
+    void Afficher();
 
 //------------------------------------------------- Surcharge d'opérateurs
     ListeChainee & operator = ( const ListeChainee & unListeChainee );
@@ -78,7 +78,7 @@ public:
     //
     // Contrat :
     //
-
+    Cell *headPtr = NULL;
 //------------------------------------------------------------------ PRIVE
 
 protected:
@@ -86,7 +86,7 @@ protected:
 
 //----------------------------------------------------- Attributs protégés
 
-Cell *headPtr {NULL};
+    
 
 };
 

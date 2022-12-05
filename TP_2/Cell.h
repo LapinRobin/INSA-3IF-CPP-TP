@@ -79,14 +79,15 @@ public:
     //
     // Contrat :
     //
-    Cell* next {NULL};
+    Cell *next;
 //------------------------------------------------------------------ PRIVE
 
 protected:
 //----------------------------------------------------- Méthodes protégées
 
 //----------------------------------------------------- Attributs protégés
-  Trajet* trajet;
+    Trajet *trajet;
+    
 
 };
 

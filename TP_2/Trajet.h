@@ -62,7 +62,7 @@ public:
     //
     // Contrat :
     //
-    Trajet (char*& depart_param, char*& arrivee_param);
+    Trajet (char* depart_param, char* arrivee_param);
     // Mode d'emploi :
     //
     // Contrat :
