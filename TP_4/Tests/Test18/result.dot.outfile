@@ -1,0 +1,18 @@
+digraph {
+node7 [label="-"];
+node1 [label="/notesif"];
+node2 [label="/notesif/"];
+node3 [label="/temps/"];
+node0 [label="/temps/3IF1.ics"];
+node5 [label="/temps/3IF44.html"];
+node6 [label="/temps/4IF3.ics"];
+node4 [label="/temps/FondInsa.jpg"];
+node8 [label="/www.google.com"];
+node7 -> node1[label="1"];
+node7 -> node2[label="1"];
+node7 -> node0[label="1"];
+node7 -> node5[label="1"];
+node7 -> node6[label="1"];
+node3 -> node4[label="1"];
+node8 -> node3[label="1"];
+}
