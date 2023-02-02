@@ -1,0 +1,1 @@
+../../bin/analog -e -g result.dot -t 12 test.log

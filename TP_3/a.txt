@@ -1,0 +1,7 @@
+TS: Tokyo -> Hakodate : BulletTrain 
+TC: Lyon -> Blois :
+{
+TS: Lyon -> Paris : Bus
+TS: Paris -> Blois : Train
+}
+TS: a -> b : c 

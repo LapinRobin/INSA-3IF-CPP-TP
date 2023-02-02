@@ -1,0 +1,20 @@
+digraph {
+node7 [label="-"];
+node5 [label="/"];
+node2 [label="/SiteWebIF/Intranet-etudiant.php"];
+node9 [label="/temps/"];
+node8 [label="/temps/4IF15.html"];
+node0 [label="/temps/4IF16.html"];
+node6 [label="/temps/4IF17.html"];
+node1 [label="/temps/4IF18.html"];
+node4 [label="/temps/4IF18.jpg"];
+node3 [label="/temps/InsaIF.ico"];
+node10 [label="/www.google.com"];
+node7 -> node2[label="1"];
+node9 -> node3[label="1"];
+node8 -> node0[label="2"];
+node0 -> node6[label="1"];
+node6 -> node1[label="2"];
+node6 -> node4[label="1"];
+node10 -> node5[label="1"];
+}
